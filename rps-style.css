@@ -187,7 +187,10 @@ only the first child element */
 }
 
 .button > * {
-    /* Button HOTFIX */
+    /* Button HOTFIX 
+    /* ensure that you can click anywhere in the button 
+    /* and it will always go to the div box, not the img or p element
+       inside the button */
     pointer-events: none;
 }
 
