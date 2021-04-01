@@ -177,6 +177,13 @@ only the first child element */
     margin-bottom: 0.4em;
     width: 60%;
     height: auto;
+    /* prevents blue highlight from appearing
+    when clicking over icon */
+    -khtml-user-select: none;
+    -o-user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    user-select: none;
 }
 
 .button > * {
