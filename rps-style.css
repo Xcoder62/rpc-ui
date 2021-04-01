@@ -1,0 +1,209 @@
+@import url('https://fonts.googleapis.com/css2?family=Karla&family=Rubik:wght@700&display=swap');
+
+/* Fonts 
+font-family: 'Rubik', sans-serif; For Headings
+font-family: 'Karla', sans-serif; For Text
+*/
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-size: 24px;
+
+}
+
+body {
+    background: url('./y-so-serious-white.png');
+    background-repeat: repeat;
+    line-height: 1.25;
+    
+}
+
+.container {
+    margin: 2em auto;
+    max-width: 55em;
+    border: 2px solid gainsboro;
+    border-radius: 20px;
+    
+    
+}
+.header {
+    /*border: 1px hotpink dotted;*/ 
+    display: flex;
+    text-align: center;
+    justify-content: space-between;
+    max-width: 55em;
+    margin: 0 auto;
+    margin-bottom: 1.1em;
+    padding: 0 3em;
+    
+}
+
+.p1-score,
+.p2-score,
+.round-number {
+    font-family: "Rubik", sans-serif;
+    font-size: 1.5em;
+}
+
+.header div {
+    width: 150px;
+}
+
+.header p {
+    padding: .2em 0;
+    text-transform: uppercase;
+    font-family: "Karla", sans-serif;
+}
+
+h1 {
+    font-size: 4em;
+    font-family: 'Rubik';
+}
+
+.player-1 {
+    background-color: rgba(255, 0, 0, 0.568);
+    
+}
+
+.player-2 {
+    background-color: rgba(0, 0, 255, 0.575);
+    
+}
+
+.victory {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    /*border: orange 1px solid;*/
+    font-family: "Rubik", sans-serif;
+    visibility: hidden;
+    margin-bottom: 3em;
+    
+    
+    
+}
+
+.victory .result p {
+    color: green; /* red if cpu wins */
+    margin-bottom: .2em;
+    font-size: 2.5em;
+    
+
+}
+
+.scoreboard {
+    width:300px;
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.scoreboard .winner {
+    font-size: 2.0em;
+    text-align: center;
+    justify-content: center;
+    margin-bottom: 1em;
+    color: green;
+
+}
+
+.scoreboard .loser {
+    font-size: 2.0em;
+    text-align: center;
+    justify-content: center;
+    margin-bottom: 1em;
+    color: red;
+
+}
+
+.scoreboard .item {
+    font-size: 1.2em;
+}
+
+/* use > between .scoreboard and :first-child to target 
+only the first child element */
+.scoreboard div {
+    display: flex;
+    font-size: 0.8em;
+    justify-content: space-between;
+}
+
+.buttons {
+    display: flex;
+    max-width: 25em;
+    margin: 0 auto;
+    justify-content: center;
+    align-items: center;
+    font-size: 1rem;
+    font-family: "Karla", sans-serif;
+    margin-bottom: 2em;
+}
+
+.button {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 2px rgba(253, 184, 54, 0.753) solid;
+    margin: .5em;
+    padding: .6em;
+    padding-bottom: .3em;
+    transition: all 0.15s ease;
+    min-width: 4em;
+    width: 20em;
+    background: #fdb83633;
+    }
+
+.button:hover{
+    transform: scale(1.1);
+    box-shadow: 0 0 1em green;
+    border-color: green;
+    background: none;
+    cursor: pointer;
+    
+}
+
+.disabled {
+    pointer-events: none;
+}
+
+
+.button p {
+    font-size: 0.7em;
+}
+
+.button img { /* image changes dynamically */
+    margin-bottom: 0.4em;
+    width: 60%;
+    height: auto;
+}
+
+.button > * {
+    /* Button HOTFIX */
+    pointer-events: none;
+}
+
+.round-results {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 5em;
+    font-family: "Karla", sans-serif;
+    visibility: hidden;
+    
+}
+
+.round-results b {
+    margin-right: 8px;
+}
+
+.show-results {
+    visibility: visible;
+}
+/* ensures that the container is not sitting
+at the edges of the screen*/
+@media only screen and (min-width: 401px) and (max-width: 1320px) {
+    .container {
+        width:95%;
+    }
+}
